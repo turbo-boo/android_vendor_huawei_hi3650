@@ -23,4 +23,7 @@ PRODUCT_PACKAGES += \
     hw_charger \
     hw_ueventd
     
+PRODUCT_PACKAGES += \
+    libril
+    
 $(call inherit-product, vendor/huawei/btv/btv-vendor-blobs.mk)
