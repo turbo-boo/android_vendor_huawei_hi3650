@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- !!!!!!!!!!!!warnning!!!!!!!!!!!!  -->
+<!-- this config is used to config big memory -->
+<!-- upon the item iaware, no allowed add any item -->
+<!-- if you want to accelerate camera launch-->
+<!-- please copy the following xml to your own product folder-->
+<iaware iawareversion="1.0">
+    <feature name="Memory">
+        <config name="BigMemApp">
+            <item appname="com.huawei.camera">
+                <launch>800</launch>
+            </item>
+        </config>
+        <config name="MemoryConstant" >
+            <item ramsize="2048">
+                <averageAppUss>20</averageAppUss>
+                <lowCpuLoad>30</lowCpuLoad>
+                <highCpuLoad>60</highCpuLoad>
+                <emergencyMemory>350</emergencyMemory>
+                <bigMemCriticalMemory>400</bigMemCriticalMemory>
+                <defaultCriticalMemory>600</defaultCriticalMemory>
+                <normalMemory>900</normalMemory>
+                <gpuMemory>900</gpuMemory>
+                <reservedZram>100</reservedZram>
+                <swappiness>150</swappiness>
+                <direct_swappiness>60</direct_swappiness>
+                <extra_free_kbytes>61440</extra_free_kbytes>
+                <protect_lru_limit>30 40 0</protect_lru_limit>
+                <protect_lru_ratio>50</protect_lru_ratio>
+                <numProcessLimit>32</numProcessLimit>
+                <numEmptyProcessPercent>50</numEmptyProcessPercent>
+                <gmc_switch>1</gmc_switch>
+                <prereadOdexSwitch>0</prereadOdexSwitch>
+            </item>
+            <item ramsize="3072">
+                <averageAppUss>20</averageAppUss>
+                <lowCpuLoad>30</lowCpuLoad>
+                <highCpuLoad>60</highCpuLoad>
+                <emergencyMemory>400</emergencyMemory>
+                <bigMemCriticalMemory>450</bigMemCriticalMemory>
+                <defaultCriticalMemory>650</defaultCriticalMemory>
+                <gpuMemory>1024</gpuMemory>
+                <normalMemory>1024</normalMemory>
+                <reservedZram>100</reservedZram>
+                <swappiness>120</swappiness>
+                <direct_swappiness>10</direct_swappiness>
+                <extra_free_kbytes>61440</extra_free_kbytes>
+                <protect_lru_limit>60 80 0</protect_lru_limit>
+            </item>
+            <item ramsize="4096">
+                <averageAppUss>20</averageAppUss>
+                <lowCpuLoad>30</lowCpuLoad>
+                <highCpuLoad>60</highCpuLoad>
+                <emergencyMemory>400</emergencyMemory>
+                <bigMemCriticalMemory>450</bigMemCriticalMemory>
+                <defaultCriticalMemory>800</defaultCriticalMemory>
+                <gpuMemory>1228</gpuMemory>
+                <normalMemory>1228</normalMemory>
+                <reservedZram>100</reservedZram>
+                <swappiness>100</swappiness>
+                <direct_swappiness>60</direct_swappiness>
+                <extra_free_kbytes>61440</extra_free_kbytes>
+                <protect_lru_limit>60 80 0</protect_lru_limit>
+                <protect_lru_ratio>50</protect_lru_ratio>
+                <numProcessLimit>36</numProcessLimit>
+                <numEmptyProcessPercent>67</numEmptyProcessPercent>
+                <gmc_switch>1</gmc_switch>
+                <prereadOdexSwitch>0</prereadOdexSwitch>
+            </item>
+            <item ramsize="6144">
+                <averageAppUss>20</averageAppUss>
+                <lowCpuLoad>30</lowCpuLoad>
+                <highCpuLoad>60</highCpuLoad>
+                <emergencyMemory>500</emergencyMemory>
+                <bigMemCriticalMemory>550</bigMemCriticalMemory>
+                <defaultCriticalMemory>900</defaultCriticalMemory>
+                <gpuMemory>1428</gpuMemory>
+                <normalMemory>1428</normalMemory>
+                <reservedZram>100</reservedZram>
+                <swappiness>100</swappiness>
+                <direct_swappiness>60</direct_swappiness>
+                <extra_free_kbytes>61440</extra_free_kbytes>
+                <numProcessLimit>64</numProcessLimit>
+                <numEmptyProcessPercent>50</numEmptyProcessPercent>
+                <gmc_switch>1</gmc_switch>
+                <prereadOdexSwitch>1</prereadOdexSwitch>
+            </item>
+        </config>
+    </feature>
+    <feature name="CPU">
+        <config name="sub_switch">
+            <item type="switch">
+                <log bit="0">0</log>
+                <freq_interactive bit="1">1</freq_interactive>
+                <scroller_boost bit="3">1</scroller_boost>
+                <key_thread_boost bit="4">1</key_thread_boost>
+                <ta_app_start_boost bit="5">0</ta_app_start_boost>
+                <eapa bit="7">0</eapa>
+                <vr bit="8">0</vr>
+                <cpuctl_fg bit="10">1</cpuctl_fg>
+                <vip_thread bit="11">1</vip_thread>
+                <eas bit="13">1</eas>
+                <game_scene bit="14">0</game_scene>
+            </item>
+        </config>
+        <config name="enable_pg_freq">
+            <item>
+                <enable>false</enable>
+            </item>
+        </config>
+        <config name="cpuset_screen_on">
+            <item type="cpuset">
+                <fg>0-7</fg>
+                <bg>2-3</bg>
+                <key_bg>2-3,7</key_bg>
+                <sys_bg>0-3</sys_bg>
+                <top_app>0-7</top_app>
+                <ta_boost>4-7</ta_boost>
+                <boost>4-7</boost>
+            </item>
+        </config>
+        <config name="cpuset_VR">
+            <item type="cpuset">
+                <fg>0-2,4-7</fg>
+                <bg>0-2</bg>
+                <key_bg>0-2</key_bg>
+                <sys_bg>0-2</sys_bg>
+                <top_app>0-7</top_app>
+                <boost>4-7</boost>
+            </item>
+        </config>
+        <config name="cpuset_screen_off">
+            <item type="cpuset">
+                <fg>0-7</fg>
+                <bg>0-3</bg>
+                <key_bg>0-3</key_bg>
+                <sys_bg>0-3</sys_bg>
+                <top_app>0-7</top_app>
+                <boost>0-7</boost>
+            </item>
+        </config>
+        <!-- enable by freq_interactive sub_switch -->
+        <config name="freq_interactive">
+            <item>
+                <go_hispeed_load_l>90</go_hispeed_load_l>
+                <go_hispeed_load_b>85</go_hispeed_load_b>
+                <hispeed_freq_l>1306000</hispeed_freq_l>
+                <hispeed_freq_b>1210000</hispeed_freq_b>
+                <target_load_freq_l>90:1306000:85</target_load_freq_l>
+                <target_load_freq_b>85:1210000:90:1517000:80</target_load_freq_b>
+            </item>
+        </config>
+        <config name="power_nosave_freq">
+            <item>
+                <go_hispeed_load_l>95</go_hispeed_load_l>
+                <go_hispeed_load_b>90</go_hispeed_load_b>
+                <hispeed_freq_l>1306000</hispeed_freq_l>
+                <hispeed_freq_b>1210000</hispeed_freq_b>
+                <target_load_freq_l>70:807000:80:1018000:90:1306000:95</target_load_freq_l>
+                <target_load_freq_b>80:807000:81:1210000:85:1517000:95</target_load_freq_b>
+            </item>
+        </config>
+        <config name="power_save_freq">
+            <item>
+                <go_hispeed_load_l>95</go_hispeed_load_l>
+                <go_hispeed_load_b>90</go_hispeed_load_b>
+                <hispeed_freq_l>1306000</hispeed_freq_l>
+                <hispeed_freq_b>1210000</hispeed_freq_b>
+                <target_load_freq_l>70:807000:80:1018000:90:1306000:95</target_load_freq_l>
+                <target_load_freq_b>80:807000:81:1210000:85:1517000:95</target_load_freq_b>
+            </item>
+        </config>
+        <config name="power_supersave_freq">
+            <item>
+                <go_hispeed_load_l>99</go_hispeed_load_l>
+                <go_hispeed_load_b>99</go_hispeed_load_b>
+                <hispeed_freq_l>1306000</hispeed_freq_l>
+                <hispeed_freq_b>1210000</hispeed_freq_b>
+                <target_load_freq_l>70:807000:80:1018000:90:1306000:95</target_load_freq_l>
+                <target_load_freq_b>80:807000:81:1210000:85:1517000:95</target_load_freq_b>
+            </item>
+        </config>
+        <config name="scroller_boost">
+            <item>
+                <boost_duration>1000</boost_duration>
+                <enable_skipped_frame>3</enable_skipped_frame>
+                <boost_by_each_fling>true</boost_by_each_fling>
+            </item>
+        </config>
+        <config name="boost_key_thread_list">
+            <item process_name="system_server">
+                <thread_name>ActivityManag</thread_name>
+                <thread_name>sManagerService</thread_name>
+                <thread_name>Binder:</thread_name>
+            </item>
+            <item process_name="com.android.incallui">
+                <thread_name>ndroid.incallui</thread_name>
+            </item>
+        </config>
+        <config name="eapa_constant">
+            <item type="global">
+                <lowest_skipframe>4</lowest_skipframe>
+                <period_num>10</period_num>
+                <sample_interval>200</sample_interval>
+                <sample_num>5</sample_num>
+                <thresholds>55</thresholds>
+            </item>
+            <item type="b_cluster">
+                <lowfreq>1805</lowfreq>
+                <freq>1210;1517;1805;2016;2304;</freq>
+            </item>
+        </config>
+
+        <config name="cpuctl_limit">
+            <item>
+                <cpu_ta_load_threshold>90</cpu_ta_load_threshold>
+                <cpu_fg_load_threshold>80</cpu_fg_load_threshold>
+                <cpu_fg_load_limit>60</cpu_fg_load_limit>
+                <cpu_load_low_threshold>60</cpu_load_low_threshold>
+                <cpu_highload_polling_interval>1000</cpu_highload_polling_interval>
+            </item>
+        </config>
+        <config name="vip_thread_param">
+            <item>
+                <vip_min_sched_delay_granularity>0</vip_min_sched_delay_granularity>
+                <vip_max_dynamic_granularity>32</vip_max_dynamic_granularity>
+                <vip_min_migration_delay>10</vip_min_migration_delay>
+            </item>
+        </config>
+        <config name="vip_white_list">
+            <item>
+                <procname>m.huawei.camera</procname>
+            </item>
+        </config>
+    </feature>
+    <!-- switch 0:contain no game; 1:use WhiteList; 2:for all games -->
+   <feature name="GameOpt">
+        <config name="subSwitch">
+            <item feature="bigCore">
+                <switch>0</switch>
+                <whiteList>com.tencent.tmgp.sgame</whiteList>
+            </item>
+            <item feature="feedback">
+                <switch>2</switch>
+                <whiteList>com.tencent.tmgp.speedmobile:com.tencent.tmgp.sgame:com.kiloo.subwaysurf:com.tencent.tmgp.bh3:com.miHoYo.enterprise.NGHSoD:com.miHoYo.bh3.huawei:com.ak.mi:com.tencent.tmgp.cf:com.netease.hyxd.huawei:com.netease.hyxd:com.netease.zjz:com.netease.zjz.huawei:com.tencent.cldts</whiteList>
+            </item>
+        </config>
+        <config name="threshold">
+            <item feature="bigCore">
+                <dropThreshold>1,255,325,655,865</dropThreshold>
+                <riseThreshold>3,270,340,670,880</riseThreshold>
+            </item>
+            <item feature="feedback">
+                <!-- kpiValid,kpiDoor -->
+                <kpi>8.0,2.0</kpi>
+                <!-- cpuHigh,cpuLow,gpuHigh,gpuLow -->
+                <usage>70,30,70,30</usage>
+                <!-- sensorType,temp_ratio -->
+                <ratio>9,0.9:0,0.9</ratio>
+                <!-- temp_level_0~temp_level_3,min fps-->
+                <mode30>0,1,3,5,25</mode30>
+                <mode60>0,10,15,20,40</mode60>
+            </item>
+        </config>
+    </feature>
+    <feature name="appmng_feature">
+        <config name="installer_mgr">
+            <item type="WhiteList">
+                <pkg>com.android.packageinstaller</pkg>
+                <pkg>com.huawei.appmarket</pkg>
+            </item>
+        </config>
+        <config name="installer_duration">
+            <item>
+                <short_frz_dur>3000</short_frz_dur>
+                <slide_frz_dur>6000</slide_frz_dur>
+                <unfrz_dur>1000</unfrz_dur>
+            </item>
+        </config>
+    </feature>
+    <feature name="DevSchedFeature">
+        <config name="sub_switch">
+            <item type="switch">
+                <wifi bit="0">1</wifi>
+                <spk bit="2">1</spk>
+                <modem bit="3">1</modem>
+                <gps bit="4">1</gps>
+            </item>
+        </config>
+        <config name="speaker">
+            <item>
+                <music>100</music>
+                <video>100</video>
+                <game>100</game>
+                <default>100</default>
+                <debug>0</debug>
+                <smartpa>0</smartpa>
+            </item>
+        </config>
+        <config name="wifi">
+            <!--(mode=-1 not_allow, mode=0 allow, mode=*** all *** ms one time) -->
+            <item scenename="default" scene_id="2110">
+                <wifi rule="allow" mode="0" prio="1">0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,255,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325</wifi>
+                <wifi rule="Service_Rule" mode="1800000" prio="0">com.letv.android.client,com.tencent.qqlive,com.youku.phone,com.qiyi.video,com.tencent.tmgp.sgame,com.ss.android.article.news,com.tencent.news,com.netease.newsreader.activity,com.ss.android.essay.joke,cn.kuwo.player,com.kugou.android,com.cubic.autohome,cn.etouch.ecalendar</wifi>
+                <wifi rule="Service_Rule" mode="60000" prio="0">com.huajiao,com.huawei.camera,cmb.pb,cn.com.njcb.android.mobilebank,com.taobao.taobao,com.dianping.v1,com.greenpoint.android.mc10086.activity,com.jingdong.app.mall,com.tmall.wireless,com.sankuai.meituan,me.ele,com.taobao.idlefish</wifi>
+            </item>
+            <item scenename="static" scene_id="2111">
+                <wifi rule="allow" mode="0" prio="1">0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,255,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325</wifi>
+                <wifi rule="Service_Rule" mode="1800000" prio="0">com.huawei.lbs,com.amap.android.ams,com.autonavi.xmgd.navigator,com.baidu.BaiduMap,com.baidu.navi,com.google.android.apps.maps,com.mobike.mobikeapp,so.ofo.labofo,com.coomix.app.bus,com.sdu.didi.psnger,com.sdu.didi.gsui,com.tencent.mm,com.tencent.mobileqq,com.huawei.android.totemweather,com.eg.android.AlipayGphone,com.baidu.searchbox,com.moji.mjweather,com.homelink.android,com.sina.weibo,com.babytree.apps.pregnancy,com.huajiao,com.huawei.camera,cmb.pb,cn.com.njcb.android.mobilebank,com.taobao.taobao,com.dianping.v1,com.greenpoint.android.mc10086.activity,com.jingdong.app.mall,com.tmall.wireless,com.sankuai.meituan,me.ele,com.taobao.idlefish,com.letv.android.client,com.tencent.qqlive,com.youku.phone,com.qiyi.video,com.tencent.tmgp.sgame,com.ss.android.article.news,com.tencent.news,com.netease.newsreader.activity,com.ss.android.essay.joke,cn.kuwo.player,com.kugou.android,com.UCMobile,com.tencent.mtt,com.cubic.autohome,cn.etouch.ecalendar</wifi>
+            </item>
+            <item scenename="relative_static_one" scene_id="2112">
+                <wifi rule="allow" mode="0" prio="1">0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,255,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325</wifi>
+                <wifi rule="Service_Rule" mode="1800000" prio="0">com.huajiao,com.letv.android.client,com.tencent.qqlive,com.youku.phone,com.qiyi.video,com.tencent.tmgp.sgame,com.ss.android.article.news,com.tencent.news,com.netease.newsreader.activity,com.ss.android.essay.joke,cn.kuwo.player,com.kugou.android,com.cubic.autohome,cn.etouch.ecalendar</wifi>
+                <wifi rule="Service_Rule" mode="60000" prio="0">com.huawei.camera,cmb.pb,cn.com.njcb.android.mobilebank,com.taobao.taobao,com.dianping.v1,com.greenpoint.android.mc10086.activity,com.jingdong.app.mall,com.tmall.wireless,com.sankuai.meituan,me.ele,com.taobao.idlefish</wifi>
+            </item>
+        </config>
+        <config name="modem">
+            <!--(mode=-1 not_allow, mode=0 allow, mode=*** all *** ms one time) -->
+            <item scenename="default" scene_id="2110">
+                <modem rule="allow" mode="0" prio="1">0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,255,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325</modem>
+                <modem rule="Service_Rule" mode="1800000" prio="0">com.letv.android.client,com.tencent.qqlive,com.youku.phone,com.qiyi.video,com.tencent.tmgp.sgame,com.ss.android.article.news,com.tencent.news,com.netease.newsreader.activity,com.ss.android.essay.joke,cn.kuwo.player,com.kugou.android,com.cubic.autohome,cn.etouch.ecalendar</modem>
+                <modem rule="Service_Rule" mode="60000" prio="0">com.huajiao,com.huawei.camera,cmb.pb,cn.com.njcb.android.mobilebank,com.taobao.taobao,com.dianping.v1,com.greenpoint.android.mc10086.activity,com.jingdong.app.mall,com.tmall.wireless,com.sankuai.meituan,me.ele,com.taobao.idlefish</modem>
+            </item>
+            <item scenename="static" scene_id="2111">
+                <modem rule="allow" mode="0" prio="1">0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,255,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325</modem>
+                <modem rule="Service_Rule" mode="1800000" prio="0">com.huawei.lbs,com.amap.android.ams,com.autonavi.xmgd.navigator,com.baidu.BaiduMap,com.baidu.navi,com.google.android.apps.maps,com.mobike.mobikeapp,so.ofo.labofo,com.coomix.app.bus,com.sdu.didi.psnger,com.sdu.didi.gsui,com.tencent.mm,com.tencent.mobileqq,com.huawei.android.totemweather,com.eg.android.AlipayGphone,com.baidu.searchbox,com.moji.mjweather,com.homelink.android,com.sina.weibo,com.babytree.apps.pregnancy,com.huajiao,com.huawei.camera,cmb.pb,cn.com.njcb.android.mobilebank,com.taobao.taobao,com.dianping.v1,com.greenpoint.android.mc10086.activity,com.jingdong.app.mall,com.tmall.wireless,com.sankuai.meituan,me.ele,com.taobao.idlefish,com.letv.android.client,com.tencent.qqlive,com.youku.phone,com.qiyi.video,com.tencent.tmgp.sgame,com.ss.android.article.news,com.tencent.news,com.netease.newsreader.activity,com.ss.android.essay.joke,cn.kuwo.player,com.kugou.android,com.UCMobile,com.tencent.mtt,com.cubic.autohome,cn.etouch.ecalendar</modem>
+            </item>
+            <item scenename="relative_static_one" scene_id="2112">
+                <modem rule="allow" mode="0" prio="1">0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,255,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325</modem>
+                <modem rule="Service_Rule" mode="1800000" prio="0">com.huajiao,com.letv.android.client,com.tencent.qqlive,com.youku.phone,com.qiyi.video,com.tencent.tmgp.sgame,com.ss.android.article.news,com.tencent.news,com.netease.newsreader.activity,com.ss.android.essay.joke,cn.kuwo.player,com.kugou.android,com.cubic.autohome,cn.etouch.ecalendar</modem>
+                <modem rule="Service_Rule" mode="60000" prio="0">com.huawei.camera,cmb.pb,cn.com.njcb.android.mobilebank,com.taobao.taobao,com.dianping.v1,com.greenpoint.android.mc10086.activity,com.jingdong.app.mall,com.tmall.wireless,com.sankuai.meituan,me.ele,com.taobao.idlefish</modem>
+            </item>
+        </config>
+        <!--(0-no change 1-extremely high accuracy 2-high accuracy 3-coarse accuracy 4-passive 5-freeze) -->
+        <config name="gps_strategy">
+            <!-- type source from AppTypeInfo.java -->
+            <!-- scene_id source from DevSchedConstant.java -->
+            <item scenename="App_Foreground" scene_id="2100">
+                <gps rule="Pre_Recog" mode="3">1,4,5,6,7,8,9,10,12,13,16,19,20,21,305,308,310,312,315</gps>
+            </item>
+            <item scenename="App_Background" scene_id="2201">
+                <gps rule="Pre_Recog" mode="3">1,4,5,6,7,8,9,10,12,13,16,19,20,21,305,308,310,312,315</gps>
+            </item>
+            <item scenename="Screen_On" scene_id="2017">
+                <gps rule="Pre_Recog" mode="3">1,4,5,6,7,8,9,10,12,13,16,19,20,21,305,308,310,312,315</gps>
+            </item>
+            <item scenename="Screen_Off" scene_id="2016">
+                <gps rule="Pre_Recog" mode="3">1,4,5,6,7,8,9,10,12,13,14,16,19,20,21,305,308,310,312,315</gps>
+            </item>
+            <item scenename="Activity_Start" scene_id="2104">
+                <gps rule="Activity_In" mode="3" package_name="com.tencent.mm">
+                    com.tencent.mm/.plugin.nearby.ui.NearbyFriendsUI,
+                    com.tencent.mm/.plugin.nearlife.ui.CheckInLifeUI
+                </gps>
+            </item>
+        </config>
+    </feature>
+</iaware>
