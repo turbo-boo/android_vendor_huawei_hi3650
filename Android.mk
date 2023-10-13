@@ -56,4 +56,9 @@ LOCAL_SRC_FILES    := root/sbin/hw_ueventd
 LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)/sbin
 include $(BUILD_PREBUILT)
 
+# Symlink Product Audio
+$(shell mkdir -p $(TARGET_OUT)/product/etc; \
+    ln -sf /produce/etc/audio \
+	    $(TARGET_OUT)/product/etc/audio)
+
 endif
