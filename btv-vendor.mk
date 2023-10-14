@@ -24,6 +24,7 @@ PRODUCT_PACKAGES += \
     hw_ueventd
     
 PRODUCT_PACKAGES += \
+    gnss_supl20service_hisi \
     libril
     
 $(call inherit-product, vendor/huawei/btv/btv-vendor-blobs.mk)
