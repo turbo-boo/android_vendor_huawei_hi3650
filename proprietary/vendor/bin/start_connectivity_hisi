@@ -113,13 +113,6 @@ function mk_dirs()
 
     mkdir -p /data/hwlogdir/exception/
 
-    chmod 0660 /data/vendor/wifi/wpa/wpa_supplicant.conf
-
-    if [ -f "/data/vendor/wifi/efuse" ]
-    then
-        chmod 0444 /data/vendor/wifi/efuse
-    fi
-
     print_kernel_message "plat init connectivity mode, dir finish"
 }
 
