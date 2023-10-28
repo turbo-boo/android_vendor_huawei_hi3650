@@ -17,7 +17,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/huawei/btv
     
 PRODUCT_PACKAGES += \
-    27c11b57-14ff-48bf-abbe-92e345092278.sec \
     native_packages.xml \
     hdbd \
     hw_charger \
