@@ -13,5 +13,5 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES += \
-	$(call find-copy-subdir-files,*,vendor/huawei/btv/proprietary/system/,system/) \
-	$(call find-copy-subdir-files,*,vendor/huawei/btv/proprietary/vendor/,vendor/)
+	$(call find-copy-subdir-files,*,vendor/huawei/beethoven/proprietary/system/,system/) \
+	$(call find-copy-subdir-files,*,vendor/huawei/beethoven/proprietary/vendor/,vendor/)

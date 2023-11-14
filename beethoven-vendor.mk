@@ -14,7 +14,7 @@
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/huawei/btv
+    vendor/huawei/beethoven
     
 PRODUCT_PACKAGES += \
     native_packages.xml
@@ -23,4 +23,4 @@ PRODUCT_PACKAGES += \
     gnss_supl20service_hisi \
     libril
     
-$(call inherit-product, vendor/huawei/btv/btv-vendor-blobs.mk)
+$(call inherit-product, vendor/huawei/beethoven/beethoven-vendor-blobs.mk)
