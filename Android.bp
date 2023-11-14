@@ -32,4 +32,5 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
+	system_ext_specific: true,
 }
