@@ -208,7 +208,6 @@
       </setid_supported>
       <pref_setid>imsi</pref_setid>
       <priority_for_privacy_override>0</priority_for_privacy_override>
-      <stale_pos_file_path>/data/gnss/suplstalepos.dat</stale_pos_file_path>
     </supl_protocol_engine>
     <!--Configuration Paramters with respect to network controllers present -->
     <netcont_params>
@@ -219,29 +218,21 @@
       <icm>
         <port>9000</port>
         <ipaddress>127.0.0.1</ipaddress>
-        <!-- Path should be of max length = 107 -->
-        <unixsocketpath>/data/gnss/icmccm_soc</unixsocketpath>
       </icm>
       <!--Congiration parameters of Platform Communication Manager -->
       <pcm>
         <port>9001</port>
         <ipaddress>127.0.0.1</ipaddress>
-        <!-- Path should be of max length = 107 -->
-        <unixsocketpath>/data/gnss/pcm_soc</unixsocketpath>
       </pcm>
       <!--Congiration parameters of SUPL Server Communication Manager -->
       <scm>
         <port>9002</port>
         <ipaddress>127.0.0.1</ipaddress>
-        <!-- Path should be of max length = 107 -->
-        <unixsocketpath>/data/gnss/scm_soc</unixsocketpath>
       </scm>
       <!-->Client Communication Manager< -->
       <ccm>
         <port>9000</port>
         <ipaddress>127.0.0.1</ipaddress>
-        <!-- Path should be of max length = 107 -->
-        <unixsocketpath>/data/gnss/icmccm_soc</unixsocketpath>
       </ccm>
     </netcont_params>
     <!--In SUPL version 1 check GPS enable in the android setting for start the service-->
@@ -433,8 +424,6 @@
           <max_eventtrig>32</max_eventtrig>
         </sess_capab>
       </services_capability>
-      <!--File Path for historic data saving should be mentioned here-->
-      <historic_file_path>/data/gnss/</historic_file_path>
       <!--Max records that can be stored in a Historic data record-->
       <max_historic_record>1000</max_historic_record>
     </setcapability>
@@ -711,7 +700,6 @@
           be opened in less than "max_trig_int_to_keep_gps_on" milliseconds
           GDM will be forced to remain open -->
       <max_trig_int_to_keep_gps_on>60000</max_trig_int_to_keep_gps_on>
-      <stale_pos_file_path>/data/gnss/suplstalepos.dat</stale_pos_file_path>
       <!-- If a triggered session isn't going to communicate with the
             server for "max_trig_int_to_keep_cnxn" milliseconds the
             connection to the server will be closed. It will be reopened only
@@ -736,29 +724,21 @@
       <icm>
         <port>9000</port>
         <ipaddress>127.0.0.1</ipaddress>
-        <!-- Path should be of max length = 107 -->
-        <unixsocketpath>/data/gnss/icmccm_soc</unixsocketpath>
       </icm>
       <!--Congiration parameters of Platform Communication Manager -->
       <pcm>
         <port>9001</port>
         <ipaddress>127.0.0.1</ipaddress>
-        <!-- Path should be of max length = 107 -->
-        <unixsocketpath>/data/gnss/pcm_soc</unixsocketpath>
       </pcm>
       <!--Congiration parameters of SUPL Server Communication Manager -->
       <scm>
         <port>9002</port>
         <ipaddress>127.0.0.1</ipaddress>
-        <!-- Path should be of max length = 107 -->
-        <unixsocketpath>/data/gnss/scm_soc</unixsocketpath>
       </scm>
       <!-->Client Communication Manager< -->
       <ccm>
         <port>9000</port>
         <ipaddress>127.0.0.1</ipaddress>
-        <!-- Path should be of max length = 107 -->
-        <unixsocketpath>/data/gnss/icmccm_soc</unixsocketpath>
       </ccm>
     </netcont_params>
     <!--H-SLP server Configuration -->
