@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="gb2312"?>
+<?xml version='1.0' encoding='utf-8'?>
 <LaserSelfCaliCongig>
 	<EnableAutoTunning>1</EnableAutoTunning>
 	<EnableDirtyDetection>1</EnableDirtyDetection>
