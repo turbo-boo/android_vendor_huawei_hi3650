@@ -19,6 +19,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     gnss_supl20service_hisi \
     native_packages.xml \
-    libril
+    libril-hisi
     
 $(call inherit-product, vendor/huawei/beethoven/beethoven-vendor-blobs.mk)
