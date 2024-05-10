@@ -15,6 +15,5 @@
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,vendor/huawei/hi3650/proprietary/camera/,vendor/) \
 	$(call find-copy-subdir-files,*,vendor/huawei/hi3650/proprietary/vendor/,vendor/) \
-	$(call find-copy-subdir-files,*,vendor/huawei/hi3650/proprietary/product/,product/) \
 	$(call find-copy-subdir-files,*,vendor/huawei/hi3650/proprietary/odm/,odm/)
 	
