@@ -17,7 +17,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/huawei/hi3650
     
 PRODUCT_PACKAGES += \
-    gnss_supl20service_hisi \
-    native_packages.xml
+    gnss_supl20service_hisi
     
 $(call inherit-product, vendor/huawei/hi3650/hi3650-vendor-blobs.mk)

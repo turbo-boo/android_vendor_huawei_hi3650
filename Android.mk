@@ -16,12 +16,4 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter btvdl09 btvw09,$(TARGET_DEVICE)),)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE       := native_packages.xml
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := root/res/native_packages.xml
-LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)/res
-include $(BUILD_PREBUILT)
-
 endif
