@@ -13,3 +13,18 @@ android_app_import {
 	},
 	privileged: true,
 }
+
+android_app_import {
+	name: "opencamera",
+	owner: "huawei",
+	apk: "system/app/opencamera/opencamera.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+	overrides: [
+		"Aperture",
+		"Camera2"
+	],
+}
