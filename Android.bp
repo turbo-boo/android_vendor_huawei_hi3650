@@ -15,9 +15,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "opencamera",
+	name: "Camera",
 	owner: "huawei",
-	apk: "system/app/opencamera/opencamera.apk",
+	apk: "system/app/Camera/Camera.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,

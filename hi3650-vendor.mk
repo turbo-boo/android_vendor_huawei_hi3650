@@ -19,7 +19,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     gnss_supl20service_hisi \
     native_packages.xml \
-    opencamera
+    Camera
     
 $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 $(call inherit-product, vendor/huawei/hi3650/hi3650-vendor-blobs.mk)
